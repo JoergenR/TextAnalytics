@@ -24,7 +24,7 @@ public class Main {
             while (x != input.TT_EOF)
             {
                 if (input.ttype == input.TT_WORD)
-                  in = input.sval.toUpperCase().replaceAll("[^a-zA-Z0-9]"," ");
+                  in = input.sval.toUpperCase().replaceAll("[^a-zA-Z0-9]","");
                 x = input.nextToken ();
 
 

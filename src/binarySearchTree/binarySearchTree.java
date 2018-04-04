@@ -61,27 +61,24 @@ public class binarySearchTree
         boolean finished = false;
 
         // Insert new node as a leaf in the tree
-        while (!finished)
-        {
-            //compareTo
-            if (value.compareTo(current.data) == 0 )
-            {
-                if (current.left == null)
-                {
+        while (!finished) {
+
+            if (value.compareTo(current.data) == 0) {
+                num++;
+                finished = true;
+            }
+            else if (value.compareTo(current.data) < 0) {
+                if (current.left == null) {
                     current.left = newNode;
                     finished = true;
-                }
-                else
+                } else
                     current = current.left;
             }
-            else
-            {
-                if (current.right == null)
-                {
+            else {
+                if (current.right == null) {
                     current.right = newNode;
                     finished = true;
-                }
-                else
+                } else
                     current = current.right;
             }
         }

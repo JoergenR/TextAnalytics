@@ -89,7 +89,8 @@ public class binarySearchTree
 
     //
     // Printout of inorder tree traversal, for demo purposes
-    //
+    
+    // Må gjøre om på denne slik at utskriften blir riktig
     public void inorder()
     {
         System.out.print("Inorder: ");

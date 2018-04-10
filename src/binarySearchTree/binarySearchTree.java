@@ -13,16 +13,18 @@ public class binarySearchTree
     {
         String data;
         treeNode left, right;
+        int num;
 
         public treeNode(String value)
         {
             data = value;
             left = right = null;
+            num = 1;
         }
 
         void write()
         {
-            System.out.print(data + " ");
+            System.out.println("\n" + data + " Antall: " + num);
         }
     }
 
@@ -48,7 +50,7 @@ public class binarySearchTree
     public void insert(String value)
     {
         treeNode newNode = new treeNode(value);
-        int num = 1;
+
 
         // Create new root if tree is empty
         if (isEmpty())
@@ -64,7 +66,7 @@ public class binarySearchTree
         while (!finished) {
 
             if (value.compareTo(current.data) == 0) {
-                num++;
+                current.num++;
                 finished = true;
             }
             else if (value.compareTo(current.data) < 0) {

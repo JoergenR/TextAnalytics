@@ -23,13 +23,16 @@ public class Main {
             int x = input.nextToken();
             while (x != input.TT_EOF)
             {
-                if (input.ttype == input.TT_WORD)
-                  in = input.sval.toUpperCase().replaceAll("[^a-zA-Z0-9]","");
+                if (input.ttype == input.TT_WORD) {
+                    if(input.sval.equals("exitInput"))
+                        break;
+                    bst.insert(input.sval.toUpperCase().replaceAll("[^a-zA-Z0-9]", ""));
+                }
                 x = input.nextToken ();
 
 
             }
-            bst.insert(in);
+            bst.inorder();
         }
         catch (IOException e) {};
     }

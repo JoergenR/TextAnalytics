@@ -17,7 +17,7 @@ public class Main {
         binarySearchTree bst = new binarySearchTree();
 
 
-        System.out.println("Enter text: ");
+        System.out.println("Enter text: | Type exitInput at the end to stop input..");
         try
         {
             int x = input.nextToken();

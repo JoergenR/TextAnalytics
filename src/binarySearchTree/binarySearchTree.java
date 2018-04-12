@@ -1,20 +1,15 @@
 package binarySearchTree;
 
-// Standard operations on binary search trees
-////
-//// Nodes contain just a single character in addition to the two
-//// pointers to left and right child
-//
-
 public class binarySearchTree
 {
-    // Inner class for binary tree nodes with single-character data
+    // Indre klasse for treet
     private class treeNode
     {
         String data;
         treeNode left, right;
         int num;
 
+        // Konstruktør
         public treeNode(String value)
         {
             data = value;
@@ -28,25 +23,22 @@ public class binarySearchTree
         }
     }
 
-    // Root of entire search tree
+    // Root
     private treeNode root;
 
-    // Constructor, creates empty tree
+    // Constructor, oppretter nytt tre
     public void binarySearchTree()
     {
         root = null;
     }
 
-    // Check for empty tree
+    // Sjekker etter tomt tre
     public boolean isEmpty()
     {
         return (root == null);
     }
 
-
-    //
-    // Insertion of new value into binary search tree
-    // Trenger en variabel for å telle antall
+    // Setter inn ny verdi i treet
     public void insert(String value)
     {
         treeNode newNode = new treeNode(value);
@@ -62,7 +54,9 @@ public class binarySearchTree
         treeNode current = root;
         boolean finished = false;
 
-        // Insert new node as a leaf in the tree
+        // Setter inn ny node i treet, sammenligningen er lik så oppdateres
+        // variabelen num som holder på antall av ett ord, ellers så opprettes en ny node
+        // Lagres alfabetisk
         while (!finished) {
 
             if (value.compareTo(current.data) == 0) {
@@ -87,12 +81,8 @@ public class binarySearchTree
     }
 
 
+    // Printmetode
 
-
-    //
-    // Printout of inorder tree traversal, for demo purposes
-    
-    // Må gjøre om på denne slik at utskriften blir riktig
     public void inorder()
     {
         System.out.print("Inorder: ");

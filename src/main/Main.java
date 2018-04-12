@@ -16,6 +16,8 @@ public class Main {
         StreamTokenizer input = new StreamTokenizer(r);
         binarySearchTree bst = new binarySearchTree();
 
+        // Henter text fra user input og deler opp i ord
+        // Sender ordene til insert metoden i det binære søketreet
 
         System.out.println("Enter text: | Type exitInput at the end to stop input..");
         try
@@ -32,6 +34,7 @@ public class Main {
 
 
             }
+            // Kaller printmetoden slik at treet blir skrevet ut alfabetisk og med antall av hvert ord
             bst.inorder();
         }
         catch (IOException e) {};
